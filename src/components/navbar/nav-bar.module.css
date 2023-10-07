@@ -1,0 +1,43 @@
+.contentLinks a {
+    color: white;
+    font-size: 1.135rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    border-radius: 40px;
+    width: 8rem;
+    transition: .5s;
+    font-weight: bold;
+   height: 4rem;
+}
+
+.contentLinks a:hover {
+    background-color: #0690af;
+    box-shadow: -1px 2px 15px 1px #000000 inset;
+
+}
+
+.contentLinks {
+    background-color: #7ee8e985;
+    width: 90%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    max-width: 70rem;
+    margin: 0 auto 2rem;
+    border-radius: 40px;
+    padding: .5rem;
+}
+
+.contentLogo  h1 {
+    font-size: 3.5rem;
+    background-color: #7ee8e985;
+    height: 5rem;
+    padding: 1rem 2rem 0 2rem;
+    border-radius: 40px 40px 0 0;
+    z-index: 2;
+}
+
+.contentLogo h1:hover {
+ 
+}
