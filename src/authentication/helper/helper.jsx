@@ -1,8 +1,8 @@
 
 import axios from "axios";
 import Cookies from "universal-cookie";
-import app from  '../../app.json';
-const {APIUSUARIOS} = app;
+import app from  '../../app2.json';
+const {APIHOST} = app;
 const cookies = new Cookies();
 
 export function calculaExtreaccionSesion() {
@@ -28,7 +28,18 @@ export function renovarSesion() {
 export const request = {
     get: function (services) {
         let token = renovarSesion();
-        return axios.get(`${APIUSUARIOS}${services}`, {
+        return axios.get(`${APIHOST}${services}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+    },
+};
+
+export const requestWithToken = {
+    post: function (service, data) {
+        let token = renovarSesion();
+        return axios.post(`${APIHOST}${service}`, data, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -37,6 +48,17 @@ export const request = {
 };
 
 
+
+export const requestWithTokenGet = {
+    get: function (service, data) {
+        let token = renovarSesion();
+        return axios.get(`${APIHOST}${service}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+    },
+};
 
 
 

@@ -1,0 +1,283 @@
+
+
+*{
+  
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('../../assets/pexels-miguel-á-padriñán-19670.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+
+.father {
+    display: flex;
+    border: 2px solid rgb(14,116,142);
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgb(14,116,142);
+    transition: .2s;
+    overflow: hidden;
+    backdrop-filter: blur(7px);
+    height: 35rem;
+  
+   
+   
+}
+
+
+
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 32rem;
+    background-color: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+    justify-content: center;
+
+  
+}
+
+
+
+
+.logo-siedss {
+    background: url("../../assets/SIEDDS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 260px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: transparent;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+
+.login-content .inputbox {
+    position: relative;
+    margin: 15px 0;
+    width: 250px;
+    border-bottom: 2px solid #449485;
+    border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 16px;
+    font-size: 1.5rem;
+}
+
+
+
+.father button:last-child {
+  margin-top: 1rem;
+ 
+}
+
+
+.registro .button-registro:hover {
+    scale: 1.01;
+}
+
+
+
+.father button:hover {
+    scale: 1.01;
+}
+
+.father button ion-icon {
+    font-size: 1.5rem;
+}
+
+
+/* Contenido extra */
+
+@media (min-width: 720px) {
+    .login-content  {
+      
+        border-right: none;
+        transition: .2s ease-in-out;
+
+    }
+    .extra-content {
+        width: 20rem;
+        height: 35rem;
+        border-radius: 0px 10px 10px 0px;
+        border-left: none;
+        background: url("../../assets/2023-02-10.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        transition: .2s;
+        background-position: center;
+       
+        
+      
+    }
+
+    .hide-extra-content {
+        background: none;
+         transition: .2s ease-in-out;
+
+    }
+
+    .trasladar-login {
+        transform: translateX(20rem); 
+     
+    }
+
+    .father {
+        display: flex;
+        border: 2px solid rgb(14,116,142);
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px rgb(14,116,142);
+        max-width: 100%;
+        transition: .2s;
+       
+    }
+    
+}
+
+
+.arrow {
+   transform: rotate(180deg);
+   transition: .2s ease-in-out;
+}
+
+/* Contenido extra */
+
+.registro {
+    
+    position: absolute;
+    height: 33rem;
+    width: 17.78rem;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    border-radius: 0.5rem  0  0 0.5rem; 
+    display: none;
+   
+}
+
+@media (max-width: 720px) {
+  
+    .trasladar-login {
+        transform: translateY(32rem); 
+    }
+
+    .registro {
+        border-radius: 0.5rem  0.5rem  0.5rem 0.5rem; 
+    }
+
+}
+
+
+
+.showregistro {
+    display: flex;
+    transition: .2s ease-in;
+}
+
+
+.icon-close {
+   
+    width: 1rem;
+    padding: 0;
+    margin: 1rem;
+    position: absolute;
+    top: -0.6rem;
+    left: 15rem;
+}
+
+.icon-close ion-icon {
+    font-size: 2rem;
+    transition: .5s;
+}
+
+.icon-close ion-icon:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+
+.fechaNacimiento {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+select {
+   padding: 0.3rem;
+   background-color: transparent;
+   border: 1px solid black;
+   border-radius: .5rem;
+}
+
+
+
+.registro::-webkit-scrollbar {
+    width: 10px;
+   
+    
+    
+  }
+  
+  /* Establecer el color de fondo de la barra de desplazamiento */
+  .registro::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Establecer el color del pulgar de la barra de desplazamiento */
+  .registro::-webkit-scrollbar-thumb {
+    background: #888;
+    
+  }
+  
+  /* Establecer el color del pulgar de la barra de desplazamiento al pasar el mouse sobre él */
+  .registro::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+
+.father input:last-child {
+    background-color: transparent;
+    width: 217px;
+    border: 1px solid gray;
+    border-radius: .23rem;
+    height: 1rem; 
+    color: black;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+
+

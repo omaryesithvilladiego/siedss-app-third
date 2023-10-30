@@ -2,33 +2,33 @@ import styles from "./perfil.module.css"
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Stack from '@mui/material/Stack';
+import { Typography } from "@mui/material";
+import KeyIcon from '@mui/icons-material/Key';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 
 function Perfil() {
     return ( 
-    <div style={{width:'100%', height:'100%'}}> 
+    <div>
 
-<Box
-      sx={{
-        display: 'flex',
-        flexDirection:'column',
-        flexWrap: 'wrap',
-        '& > :not(style)': {
-          m: 1,
-          width: 600,
-          height: 400,
-        },
-      }}
-    >
-      <Paper elevation={3} >
+      <div style={{
+        display:'flex',
+        flexDirection:'row'
+      }}>
+        <div style={{backgroundColor:'red'}} className="profile-config">
 
-        <h2>Omar Yesith Villadiego</h2>
-        <p>Miembro de siedss desde el 10 de octubre de 2022</p>
-        
+        </div>
+        <div style={{backgroundColor:'yellow'}} className="profile-info">
 
-     
-      </Paper>
-     
-    </Box>
+        </div>
+
+
+      </div>
+
+      
+
 
 
     </div> );

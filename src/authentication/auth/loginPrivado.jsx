@@ -12,7 +12,7 @@ const LoginPrivado = ({ component: Component, ...rest }) => {
       {...rest}
       render={(props) =>
         checkAuth() ? (
-          <Redirect to={{ pathname: '/prueba', state: { from: props.location } }} />
+          <Redirect to={{ pathname: '/inicio', state: { from: props.location } }} />
         ) : (
           <Component {...props} />
         )

@@ -25,7 +25,7 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
     max-width: 70rem;
     margin: 0 auto 2rem;
-    border-radius: 40px;
+    border-radius: 10px;
     padding: .5rem;
 }
 
@@ -34,7 +34,7 @@
     background-color: #7ee8e985;
     height: 5rem;
     padding: 1rem 2rem 0 2rem;
-    border-radius: 40px 40px 0 0;
+    border-radius: 10px 10px 0 0;
     z-index: 2;
 }
 

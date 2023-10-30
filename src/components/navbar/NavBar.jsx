@@ -31,6 +31,7 @@ import ProyectoFormularioFormulario from '../formularios/proyectoForm/ProyectoFo
 import ProyectoFormulario from '../formularios/proyectoForm/ProyectoForm';
 import {Switch, Route,  BrowserRouter} from "react-router-dom"
 import { Component } from 'react';
+import EstadosPonencia from '../formularios/ponenciaForm/EstadosPonencia';
 
 const style = {
     position: 'absolute',
@@ -417,10 +418,17 @@ export default function PrimarySearchAppBar() {
 
 
 
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+            <IconButton onClick={handlePonenciaMenuOpen}   size="large" aria-label="show 4 new mails" color="inherit">
+              <div >
               <Badge  badgeContent={2} color="error">
-                <CoPresentIcon onClick={handlePonenciaMenuOpen} aria-controls={menuPonenciaId} />
-                <Modal
+                <CoPresentIcon  aria-controls={menuPonenciaId} />
+               
+
+
+              </Badge>
+              </div>
+            </IconButton>
+            <Modal
         open={openPonenciaForm}
         onClose={handleClosePonenciaForm}
         aria-labelledby="modal-modal-title"
@@ -430,17 +438,19 @@ export default function PrimarySearchAppBar() {
           <BrowserRouter>
           <Switch>
            
-            <Route exact path={`${path}`} component={PonenciaFormulario} />
+            <Route exact path={`${path}`  }  component={PonenciaFormulario} />
+
+            <Route exact path={`${path}/mis-ponencias`  }  component={PonenciaFormulario} />
             <Route path={`${path}/estado-ponencias`} component={() => {
               return (
                 
                 <>
+              <EstadosPonencia path={path} />
 
-<Link to={`${path}`}>Volver</Link> <br />
-                
-                Estados</>
+                </>
               )
             }} />
+
 
            
           </Switch>
@@ -448,10 +458,6 @@ export default function PrimarySearchAppBar() {
          
         </Box>
       </Modal>
-
-
-              </Badge>
-            </IconButton>
 
             
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">

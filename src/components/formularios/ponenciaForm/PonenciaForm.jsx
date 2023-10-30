@@ -19,6 +19,7 @@ import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import {Link, useRouteMatch} from "react-router-dom"
+import {requestWithToken} from '../../../authentication/helper/helper'
 
 import { APIHOST } from "../../../app2.json"
 
@@ -189,7 +190,8 @@ function PonenciaFormulario() {
     formData.append('idEstudiantePonencia', idUsuarioPonencia)
     formData.append('fechaPonencia', fechaPonencia)
     setLoaderPonencia(true)
-    axios.post(`${APIHOST}ponencia/create-ponencia`, formData)
+    
+    requestWithToken.post("ponencia/create-ponencia", formData)
       .then((response) => {
         console.log(response)
         setExito(response.data.exito)
@@ -341,6 +343,11 @@ function PonenciaFormulario() {
         </label>
         {selectedFile3 && <p>Archivo seleccionado: {selectedFile3.name}</p>}
       </div>
+
+      <DatePicker
+        selected={fechaPonencia}
+        onChange={(date) => setFechaPonencia(date)}
+      />
 
       {!file3ErrorBoolean && <Alert style={{ marginTop: '1rem' }} severity="error">
         {file3Error}
