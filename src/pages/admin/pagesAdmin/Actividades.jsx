@@ -14,6 +14,7 @@ function Actividades() {
           <Tab value={0}>Ponencias</Tab>
           <Tab value={1}>Cursos</Tab>
           <Tab value={2}>Proyectos</Tab>
+          <Tab value={3}>Premios</Tab>
         
   
          
@@ -22,6 +23,7 @@ function Actividades() {
         <TabPanel value={0}> <PonenciasAdmin /> </TabPanel>
         <TabPanel value={1}></TabPanel>
         <TabPanel value={2}>  </TabPanel>
+        <TabPanel value={3}>  </TabPanel>
       </Tabs></div> );
 }
 

@@ -1,37 +1,48 @@
 import styles from "./perfil.module.css"
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Stack from '@mui/material/Stack';
-import { Typography } from "@mui/material";
-import KeyIcon from '@mui/icons-material/Key';
-import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, useRouteMatch } from 'react-router-dom';
+import UploadImage from "./components/ProfileConfig";
+
+
+
 
 function Perfil() {
+  let {path, url} = useRouteMatch()
     return ( 
-    <div>
-
-      <div style={{
-        display:'flex',
-        flexDirection:'row'
-      }}>
-        <div style={{backgroundColor:'red'}} className="profile-config">
-
+      <Router>
+      <div className="App">
+      <nav className={styles.navContainer}>
+      <a className={styles.navItem} href={`${path}/`}>
+        Perfil
+      </a>
+      <a className={styles.navItem} href={`${path}/change-password`}>
+        Cambiar Contraseña
+      </a>
+    </nav>
+       
+        <div className="container">
+        
+          <Switch>
+            <Route exact  path={`${path}/`} component={() => {
+              return (
+                <UploadImage />
+              )
+            }} />
+            <Route  path={`${path}/change-password`} component={() => {
+              return (
+                <>Cambiar Contrasena</>
+              )
+            }} />
+          </Switch>
         </div>
-        <div style={{backgroundColor:'yellow'}} className="profile-info">
-
-        </div>
-
-
       </div>
+    </Router>
 
       
 
 
 
-    </div> );
+   );
 }
 
 export default Perfil;

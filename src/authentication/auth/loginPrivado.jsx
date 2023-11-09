@@ -21,4 +21,7 @@ const LoginPrivado = ({ component: Component, ...rest }) => {
   );
 };
 
+
+ 
+
 export default LoginPrivado;

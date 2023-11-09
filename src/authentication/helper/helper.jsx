@@ -15,9 +15,22 @@ export function getSession() {
     return (cookies.get("_s")) === undefined ? false : cookies.get("_s") ;
 }
 
+
+
 export function renovarSesion() {
     const sesion = getSession();
     if(!sesion) window.location.href = "/";
+
+    cookies.set("_s", sesion, {
+        path:"/",
+        expires:calculaExtreaccionSesion()
+    });
+    return sesion;
+}
+
+export function renovarSesionGet() {
+    const sesion = getSession();
+    if(!sesion) window.location.href = window.location;
 
     cookies.set("_s", sesion, {
         path:"/",
@@ -50,8 +63,8 @@ export const requestWithToken = {
 
 
 export const requestWithTokenGet = {
-    get: function (service, data) {
-        let token = renovarSesion();
+    get: function (service) {
+        let token = renovarSesionGet();
         return axios.get(`${APIHOST}${service}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
